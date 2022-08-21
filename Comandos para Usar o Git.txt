@@ -1,11 +1,11 @@
 COMANDOS PARA USAR O GIT
 
-==============================================================================================
+----------------------------------------------------------------------------------------------
 
 $ git config --global user.name "seu nome"		- Diz quem você é para o git
 $ git config --global user.email "seu-email@email.com"	- (só precisam ser usados uma vez)
 
-==============================================================================================
+----------------------------------------------------------------------------------------------
 
 $ git init 	- Transforma a pasta atual em um repositório
 	> --bare	- defini o repositório como "bare", ou seja, apenas para armazenamento
@@ -18,7 +18,7 @@ $ ls		- Lista os itens de um diretório
 .git 		- Pasta usada para o Git fazer o controle de versões
 			(Apague-a para dar fim ao controle de versão)
 
-==============================================================================================
+----------------------------------------------------------------------------------------------
 
 * Os três estágios para o commit:
 
@@ -38,7 +38,7 @@ $ git commit	- Passa todos os arquivos do segundo estágio para o terceiro	(2° 
 	> -m 		- adiciona uma mensagem ao commit
 	> -a		- permite comitar um arquivo no primeiro estágio
 
-==============================================================================================
+----------------------------------------------------------------------------------------------
 
 $ git log	- Mostrará uma listagem com os últimos commits com algumas informações
 	> -p		- mostra as alterações feitas no arquivos comitados
@@ -51,12 +51,12 @@ $ git log	- Mostrará uma listagem com os últimos commits com algumas informaç
 	> --since=2.days	- limita os commits mostrados de até 2 dias atrás
 	> --since=2.weeks	- limita os commits mostrados de até 2 semanas atrás
 
-==============================================================================================
+----------------------------------------------------------------------------------------------
 
 	Para restringir o git para não adicionar certos arquivos ao controle de versão é necessário criar um arquivo ".gitignore", que contenha o nome dos arquivos a serem ignorados. Cada arquivo ou pasta, deverá ser adicionado em uma linha diferente.
 
 
-==============================================================================================
+----------------------------------------------------------------------------------------------
 
 $ git branch	- Mostra o branch atual
 	> -d		- deleta um branch
@@ -75,16 +75,16 @@ $ git reset HEAD~2	- Retorna dois commits anteriores
 
 $ git restore		- Redefine os arquivos para o commit mais recente, apagando as alterações
 
-==============================================================================================
+----------------------------------------------------------------------------------------------
 
 $ git merge "outro branch"	- Mescla o branch atual com outro e cria um commit exclusivo, quando há alteracção nos dois branchs
 $ git rebase			- Faz um merge não criando um commit exclusivo da mescla
 
-==============================================================================================
+----------------------------------------------------------------------------------------------
 
 $ ssh-keygen	- Cria duas chaves criptografadas no pc (a pública pode ser usada no Github)
 
-==================================
+----------------------------------
 CRIAÇÃO E ASSOCIAÇÃO DE UM REPO
 
 $ touch README.md
@@ -93,7 +93,7 @@ $ git add README.md
 $ git commit -m "first commit"
 $ git remote add origin https://github.com/schoolofnetcom/git-code-education.git
 $ git push -u origin master
-==================================
+----------------------------------
 
 $ git remote add origin "link"		- Linka um repositório local a um online
 $ git push origin "branch"		- Empurra os arquivos para o repo online
@@ -103,7 +103,7 @@ $ git clone "link"			- Clona um repo online na máquina atual
 $ git pull		- Puxa os arquivos do repo online
 $ git push		- Empurra os arquivos para o repo online
 
-==============================================================================================
+----------------------------------------------------------------------------------------------
 
 $ git tag "0.1.0"	- gera uma tag para o projeto
 	>-1		- lista as tags do projeto
@@ -113,7 +113,7 @@ $ git init --bare	- inicializa um repo com a função de apenas armazenamento
 
 $ git remote add local	"link"
 
-==============================================================================================
+----------------------------------------------------------------------------------------------
 
 
 ----------------------------------------+

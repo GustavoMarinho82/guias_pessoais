@@ -1,0 +1,46 @@
+Tecla TAB 	- autocompleta o que você está escrevendo
+./		- indica o diretório atual
+..		- indica o diretório anterior
+../..		- indica dois diretórios anteriores
+---------------------------------------------------------------------------------
+
+cls		- limpa a tela
+---------------------------------------------------------------------------------
+
+pwd		- mostra o diretório atual
+ls (ou dir)	- mostra os diretórios e arquivos e suas permissões
+tree 		- mostra os diretórios e os arquivos dentro deles
+
+cd 		- seleciona um diretório/pasta para você "ir"
+	cd \ - vai para pasta root
+	cd C:\Users\*usuario*\Desktop
+---------------------------------------------------------------------------------
+
+md		- cria um diretório
+ni		- cria um arquivo
+
+mv (ou move)	- move um item de um lugar para outro
+cp (ou copy) 	- cópia um item de um lugar para outro
+	copy .\texto.txt  C:\Users\*usuario*\Desktop
+
+rm (ou del)	- remove um item
+ren		- renomeia um item
+---------------------------------------------------------------------------------
+
+echo		- escreve os argumentos após ele
+cat 		- exibe o conteúdo de um arquivo
+---------------------------------------------------------------------------------
+
+gps		- mostra os processos ativos
+gsv		- mostra os serviços ativos
+gv		- mostra as variáveis ativas
+h (ou history)	- mostra os comandos digitados na sessão atual
+
+kill		- mata um processo
+
+man		- mostra um manual sobre um comando
+	man kill
+---------------------------------------------------------------------------------
+
+https://devblogs.microsoft.com/scripting/table-of-basic-powershell-commands/
+---------------------------------------------------------------------------------
