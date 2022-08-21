@@ -1,0 +1,121 @@
+COMANDOS PARA USAR O GIT
+
+==============================================================================================
+
+$ git config --global user.name "seu nome"		- Diz quem você é para o git
+$ git config --global user.email "seu-email@email.com"	- (só precisam ser usados uma vez)
+
+==============================================================================================
+
+$ git init 	- Transforma a pasta atual em um repositório
+	> --bare	- defini o repositório como "bare", ou seja, apenas para armazenamento
+
+$ touch 	- Cria um ou mais arquivos
+$ mkdir		- Cria um ou mais diretórios
+$ cd		- Seleciona um diretório
+$ ls		- Lista os itens de um diretório
+
+.git 		- Pasta usada para o Git fazer o controle de versões
+			(Apague-a para dar fim ao controle de versão)
+
+==============================================================================================
+
+* Os três estágios para o commit:
+
+1. Untracked Files
+	(Estágio dos arquivos recém-criados e modificados)
+2. Changes to be committed
+	(Nesse estágio, o arquivo está pronto para ser comitado)
+3. Committed
+	(Estágio onde o arquivo já foi comitado)
+
+
+$ git status	- Mostra o estágio dos arquivos
+$ git add 	- Passa um arquivo para o segundo estágio			(1° -> 2°)
+	> .		- afeta todos os arquivos do diretório
+
+$ git commit	- Passa todos os arquivos do segundo estágio para o terceiro	(2° -> 3°)
+	> -m 		- adiciona uma mensagem ao commit
+	> -a		- permite comitar um arquivo no primeiro estágio
+
+==============================================================================================
+
+$ git log	- Mostrará uma listagem com os últimos commits com algumas informações
+	> -p		- mostra as alterações feitas no arquivos comitados
+	> -2		- mostra somente os 2 últimos commits
+	> --stat	- mostra estátisticas dos commits
+
+!	> --pretty=oneline	-remove alguns dados que poluem o log
+		--pretty=format:"%h - %an, %ar : %s"
+
+	> --since=2.days	- limita os commits mostrados de até 2 dias atrás
+	> --since=2.weeks	- limita os commits mostrados de até 2 semanas atrás
+
+==============================================================================================
+
+	Para restringir o git para não adicionar certos arquivos ao controle de versão é necessário criar um arquivo ".gitignore", que contenha o nome dos arquivos a serem ignorados. Cada arquivo ou pasta, deverá ser adicionado em uma linha diferente.
+
+
+==============================================================================================
+
+$ git branch	- Mostra o branch atual
+	> -d		- deleta um branch
+	> -a		- mostra todos os branchs
+
+$ git checkout
+	> "hash"	- recupera a versão de um commit (o hash é obtido pelo git log)
+	> "branch"	- seleciona um branch
+	> -b "nome"	- cria uma ramificação (branch) do branch atual
+
+
+$ git reset HEAD	- Desfaz o comando add 					(2° -> 1°)
+$ git reset HEAD~2	- Retorna dois commits anteriores
+	> --soft		- remove todos os commits posteriores, voltando-os para o 2° estágio, e mantendo eles na pasta
+!perigo	> --hard		- remove todos os commits posteriores
+
+$ git restore		- Redefine os arquivos para o commit mais recente, apagando as alterações
+
+==============================================================================================
+
+$ git merge "outro branch"	- Mescla o branch atual com outro e cria um commit exclusivo, quando há alteracção nos dois branchs
+$ git rebase			- Faz um merge não criando um commit exclusivo da mescla
+
+==============================================================================================
+
+$ ssh-keygen	- Cria duas chaves criptografadas no pc (a pública pode ser usada no Github)
+
+==================================
+CRIAÇÃO E ASSOCIAÇÃO DE UM REPO
+
+$ touch README.md
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git remote add origin https://github.com/schoolofnetcom/git-code-education.git
+$ git push -u origin master
+==================================
+
+$ git remote add origin "link"		- Linka um repositório local a um online
+$ git push origin "branch"		- Empurra os arquivos para o repo online
+$ git clone "link"			- Clona um repo online na máquina atual
+	> "nome da pasta"			- clona dentro de uma pasta já criada
+
+$ git pull		- Puxa os arquivos do repo online
+$ git push		- Empurra os arquivos para o repo online
+
+==============================================================================================
+
+$ git tag "0.1.0"	- gera uma tag para o projeto
+	>-1		- lista as tags do projeto
+
+$ git init --bare	- inicializa um repo com a função de apenas armazenamento
+				(esse repositório deve ser referido como "local" em vez de "origin")
+
+$ git remote add local	"link"
+
+==============================================================================================
+
+
+----------------------------------------+
+Original:				|
+https://fullcycle.com.br/git-e-github/	|
