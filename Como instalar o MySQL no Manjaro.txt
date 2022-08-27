@@ -1,0 +1,28 @@
+COMO INSTALAR O MySQL NO MANJARO
+
+----------------------------------------------------------------------------------------------
+
+Se o seu sistema de arquivos for Btrfs, use o seguinte comando depois do 3° passo e antes de criar uma database:
+
+$ chattr +C /dir/arquivo
+	/var/lib/mysql
+
+----------------------------------------------------------------------------------------------
+
+1° Passo
+	$ pacman -S mysql
+
+2° Passo
+	$ mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+
+3° Passo
+	$ systemctl start mariadb (ou mysql)
+	$ systemctl enable mariadb (ou mysql)
+
+FIM
+----------------------------------------------------------------+
+https://wiki.archlinux.org/title/MariaDB#Installation		|
+https://wiki.archlinux.org/title/Btrfs#Copy-on-Write_(CoW)	|
+								|
+LEIA A ARCHWIKI							|
+----------------------------------------------------------------+
