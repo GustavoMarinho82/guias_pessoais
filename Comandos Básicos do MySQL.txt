@@ -1,0 +1,42 @@
+COMANDOS BÁSICOS PARA O MySQL
+----------------------------------------------------------------------------------------------
+
+$ mysql -u root -p	- loga como root no mysql server
+$ exit / quit		- sai da command line do mysql
+
+----------------------------------------------------------------------------------------------
+$ CREATE	- Cria
+$ DROP		- Deleta
+$ USE		- Seleciona
+$ SHOW		- Lista
+----------------------------------------------------------------------------------------------
+
+$ SELECT * FROM tabela	- Mostra os dados de uma tabela
+	> WHERE	(coluna1=valor1)	- aplica uma condição
+
+$ DELETE FROM tabela WHERE (coluna1=valor1)
+
+$ INSERT INTO tabela (coluna1, coluna2) VALUES (valor1, valor2)
+
+$ UPDATE tabela SET coluna1=valor1 WHERE (coluna2=valor2)
+
+----------------------------------------------------------------------------------------------
+
+$ CREATE USER 'novousr'@'localhost' IDENTIFIED BY 'senha'	- cria um usuário
+$ SET PASSWORD FOR 'usuário'@'hostname' = PASSWORD('senha')	- altera a senha de um usuário
+
+$ GRANT (privilegio) ON
+	> (DB.tabela) TO 'usuario'@'localhost'	- adiciona um privilegio
+	> * TO 'usuario'@'localhost'		- adiciona um privilégio globalmente
+
+$ REVOKE (privilegio) ON (DB.tabela) TO 'usuario'@'localhost'	- remove privilegios
+
+$ FLUSH PRIVILEGES	- recarrega os privilégios
+
+-----------------------------
+Exemplos de privilégios:
+- create, drop
+- insert, update
+- ALL PRIVILEGES
+- GRANT OPTION (conceder/ remover privilégios de outros usuários)
+----------------------------------------------------------------------------------------------
