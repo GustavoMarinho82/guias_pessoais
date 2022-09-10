@@ -9,29 +9,36 @@ $ CREATE	- Cria
 $ DROP		- Deleta
 $ USE		- Seleciona
 $ SHOW		- Lista
+	>DATABASES
+	>TABLES
 ----------------------------------------------------------------------------------------------
 
-$ SELECT * FROM tabela	- Mostra os dados de uma tabela
+$ SELECT * FROM tabela			- Mostra os dados de uma tabela
 	> WHERE	(coluna1=valor1)	- aplica uma condição
+$ DESC tabela				- Lista as colunas de uma tabela
+
 
 $ DELETE FROM tabela WHERE (coluna1=valor1)
-
 $ INSERT INTO tabela (coluna1, coluna2) VALUES (valor1, valor2)
 
 $ UPDATE tabela SET coluna1=valor1 WHERE (coluna2=valor2)
+$ ALTER TABLE tabela MODIFY coluna INT NOT NULL
 
 ----------------------------------------------------------------------------------------------
 
 $ CREATE USER 'novousr'@'localhost' IDENTIFIED BY 'senha'	- cria um usuário
+$ DROP USER 'usuário'@'hostname'				- deleta um usuário
+$ SELECT host, user, password FROM mysql.user;			- lista os usuários
+
 $ SET PASSWORD FOR 'usuário'@'hostname' = PASSWORD('senha')	- altera a senha de um usuário
+
 
 $ GRANT (privilegio) ON
 	> (DB.tabela) TO 'usuario'@'localhost'	- adiciona um privilegio
 	> * TO 'usuario'@'localhost'		- adiciona um privilégio globalmente
 
 $ REVOKE (privilegio) ON (DB.tabela) TO 'usuario'@'localhost'	- remove privilegios
-
-$ FLUSH PRIVILEGES	- recarrega os privilégios
+$ FLUSH PRIVILEGES						- recarrega os privilégios
 
 -----------------------------
 Exemplos de privilégios:
