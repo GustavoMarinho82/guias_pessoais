@@ -68,7 +68,10 @@ $ git checkout
 	> -b "nome"	- cria uma ramificação (branch) do branch atual
 
 
-$ git reset HEAD	- Desfaz o comando add 					(2° -> 1°)
+$ git reset 
+	> HEAD		- Desfaz todo o comando add 					(2° -> 1°)
+	> "arquivo"	- remove um arquivo específico do 2° estágio
+
 $ git reset HEAD~2	- Retorna dois commits anteriores
 	> --soft		- remove todos os commits posteriores, voltando-os para o 2° estágio, e mantendo eles na pasta
 !perigo	> --hard		- remove todos os commits posteriores
