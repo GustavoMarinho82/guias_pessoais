@@ -77,7 +77,7 @@ $ git restore		- Redefine os arquivos para o commit mais recente, apagando as al
 
 ----------------------------------------------------------------------------------------------
 
-$ git merge "outro branch"	- Mescla o branch atual com outro e cria um commit exclusivo, quando há alteracção nos dois branchs
+$ git merge "outro branch"	- Mescla o branch atual com outro e cria um commit exclusivo, quando há alteração nos dois branchs
 $ git rebase			- Faz um merge não criando um commit exclusivo da mescla
 
 ----------------------------------------------------------------------------------------------
@@ -96,7 +96,7 @@ $ git push -u origin master
 ----------------------------------
 
 $ git remote add origin "link"		- Linka um repositório local a um online
-$ git push origin "branch"		- Empurra os arquivos para o repo online
+$ git push origin "branch"		- Empurra os arquivos de um branch para o repo online
 $ git clone "link"			- Clona um repo online na máquina atual
 	> "nome da pasta"			- clona dentro de uma pasta já criada
 
