@@ -26,18 +26,18 @@ $ ALTER TABLE tabela MODIFY coluna INT NOT NULL
 
 ----------------------------------------------------------------------------------------------
 
-$ CREATE USER 'novousr'@'localhost' IDENTIFIED BY 'senha'	- cria um usuário
-$ DROP USER 'usuário'@'hostname'				- deleta um usuário
-$ SELECT host, user, password FROM mysql.user;			- lista os usuários
+$ CREATE USER 'novousr'@'host' IDENTIFIED BY 'senha'	- cria um usuário
+$ DROP USER 'usuário'@'host'				- deleta um usuário
+$ SELECT host, user, password FROM mysql.user;		- lista os usuários
 
-$ SET PASSWORD FOR 'usuário'@'hostname' = PASSWORD('senha')	- altera a senha de um usuário
+$ SET PASSWORD FOR 'usuário'@'host' = PASSWORD('senha')	- altera a senha de um usuário
 
 
 $ GRANT (privilegio) ON
-	> (DB.tabela) TO 'usuario'@'localhost'	- adiciona um privilegio
-	> * TO 'usuario'@'localhost'		- adiciona um privilégio globalmente
+	> (DB.tabela) TO 'usuario'@'host'		- adiciona um privilegio
+	> * TO 'usuario'@'host'				- adiciona um privilégio globalmente
 
-$ REVOKE (privilegio) ON (DB.tabela) TO 'usuario'@'localhost'	- remove privilegios
+$ REVOKE (privilegio) ON (DB.tabela) TO 'usuario'@'host'	- remove privilegios
 $ FLUSH PRIVILEGES						- recarrega os privilégios
 
 -----------------------------
